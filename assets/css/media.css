@@ -1,0 +1,5 @@
+@custom-media --s (min-width: $(breakpoint-s));
+@custom-media --m (min-width: $(breakpoint-m));
+@custom-media --l (min-width: $(breakpoint-l));
+@custom-media --xl (min-width: $(breakpoint-xl));
+@custom-media --hover (hover: hover);

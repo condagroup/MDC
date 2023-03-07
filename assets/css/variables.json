@@ -1,0 +1,43 @@
+{
+  "breakpoint": {
+    "0": "0px",
+    "s": "650px",
+    "m": "1100px"
+  },
+  "color": {
+    "white": "rgba(255,255,255,1)",
+    "white-bg": "rgba(255,255,255,.85)",
+    "black": "rgba(0,0,0,1)",
+    "gray": "rgba(163,163,163,1)",
+    "accent": "rgba(255,144,27,1)",
+    "error": "rgba(207,0,0,1)",
+    "disabled": "rgba(0,0,0,.4)"
+  },
+  "wrapper": {
+    "xs": "480px",
+    "prose": "600px",
+    "s": "700px",
+    "m": "960px",
+    "l": "1440px"
+  },
+  "spacer": {
+    "0": { "default": "0px", "s": "0px", "m": "0px" },
+    "xxs": { "default": "5px", "s": "5px", "m": "5px" },
+    "xs": { "default": "10px", "s": "10px", "m": "10px" },
+    "s": { "default": "20px", "s": "20px", "m": "20px" },
+    "m": { "default": "40px", "s": "40px", "m": "40px" },
+    "l": { "default": "100px", "s": "60px", "m": "60px" },
+    "xl": { "default": "150px", "s": "100px", "m": "100px" }
+  },
+  "gap": {
+    "0": { "default": "0px", "s": "0px", "m": "0px" },
+    "xxs": { "default": "2px", "s": "2px", "m": "2px" },
+    "xs": { "default": "5px", "s": "5px", "m": "5px" },
+    "s": { "default": "7px", "s": "7px", "m": "7px" },
+    "m": { "default": "10px", "s": "10px", "m": "10px" },
+    "l": { "default": "20px", "s": "20px", "m": "20px" },
+    "xl": { "default": "40px", "s": "40px", "m": "40px" }
+  },
+  "ease-out": "cubic-bezier(0.33, 1, 0.68, 1)",
+  "ease-in": "cubic-bezier(0.32, 0, 0.67, 0)"
+}

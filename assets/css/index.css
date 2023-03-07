@@ -1,0 +1,14 @@
+@import 'normalize.css';
+@import '@/assets/css/fonts';
+@import '@/assets/css/reset';
+@import '@/assets/css/root';
+@import '@gigads/style/directives.css';
+@import '@/assets/css/directives';
+@import '@/assets/css/typography';
+@import '@/assets/css/main';
+
+/* external vendors */
+/* @import 'swiper/css/bundle'; */
+
+/* iubenda custom */
+/* @import '@/assets/css/iubenda'; */

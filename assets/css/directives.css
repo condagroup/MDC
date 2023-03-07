@@ -1,0 +1,53 @@
+.wrapper {
+  --w-width: var(--wrapper-s);
+  --w-pad: var(--spacer-s);
+}
+
+.spacer {
+  --s-top: var(--spacer-0);
+  --s-right: var(--spacer-0);
+  --s-bottom: var(--spacer-0);
+  --s-left: var(--spacer-0);
+}
+
+.padder {
+  --p-top: var(--spacer-0);
+  --p-right: var(--spacer-0);
+  --p-bottom: var(--spacer-0);
+  --p-left: var(--spacer-0);
+}
+
+.layout {
+  --l-gap: var(--gap-xs);
+  --l-dir: initial;
+  --l-align: initial;
+  --l-justify: initial;
+  --l-auto: minmax(0, 1fr);
+}
+
+.grid {
+  --g-col-gap: var(--gap-m);
+  --g-row-gap: var(--gap-m);
+  --g-min: 0;
+  --g-cols: 4;
+}
+
+.cols {
+  --g-cols: initial;
+}
+
+.ratio-container {
+  --r-width: 1;
+  --r-height: 1;
+}
+
+.ratio {
+  --r-width: 1;
+  --r-height: 1;
+  --r-fit: cover;
+}
+
+.accordion {
+  --a-speed: 0.2s;
+  --a-height: 0px;
+}

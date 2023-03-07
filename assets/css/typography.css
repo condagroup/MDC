@@ -1,0 +1,51 @@
+.typo {
+  &--s {
+    font-family: "ABCROM-Regular", sans-serif;
+    font-size: 12px;
+    line-height: 120%;
+
+    @media (--s) {
+      font-size: 13px;
+      line-height: 120%;
+    }
+  }
+  &--m {
+    font-family: "ABCROM-Regular", sans-serif;
+    font-size: 16px;
+    line-height: 110%;
+
+    @media (--s) {
+      font-size: 16px;
+      line-height: 110%;
+    }
+  }
+  &--l {
+    font-family: "ABCROM-Regular", sans-serif;
+    font-size: 22px;
+    line-height: 110%;
+
+    @media (--s) {
+      font-size: 22px;
+      line-height: 110%;
+    }
+  }
+  &--xl {
+    font-family: "ABCROM-Regular", sans-serif;
+    font-size: 32px;
+    line-height: 110%;
+
+    @media (--s) {
+      font-size: 32px;
+      line-height: 110%;
+    }
+  }
+}
+
+/* Trim https://seek-oss.github.io/capsize/ */
+.typo {
+  &--m--trimmed {
+  }
+}
+
+.wysiwyg {
+}

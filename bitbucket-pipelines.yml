@@ -1,0 +1,55 @@
+# Check our guides at https://confluence.atlassian.com/x/14UWN for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: atlassian/default-image:3
+
+pipelines:
+  branches:
+    # master:
+    #   - step:
+    #       name: PRODUCTION PIPELINE
+    #       script:
+    #         - pipe: atlassian/ssh-run:0.4.1
+    #           variables:
+    #             SSH_USER: $MDC_USER
+    #             SERVER: $MDC_HOSTNAME
+    #             SSH_KEY: $MDC_PK_BASE64
+    #             PORT: "22"
+    #             DEBUG: "true"
+    #             COMMAND: "cd /var/www/prod/frontend &&
+    #               git fetch && git pull &&
+    #               npm i && npm run build &&
+    #               cp -TR .output/ .output-dist/ &&
+    #               pm2 startOrRestart ecosystem.config.js --only prod:frontend"
+    staging:
+      - step:
+          name: STAGING PIPELINE
+          script:
+            - pipe: atlassian/ssh-run:0.4.1
+              variables:
+                SSH_USER: $MDC_USER
+                SERVER: $MDC_HOSTNAME
+                SSH_KEY: $MDC_PK_BASE64
+                PORT: '22'
+                DEBUG: 'true'
+                EXTRA_ARGS: '-o ServerAliveInterval=1000'
+                COMMAND: 'cd /var/www/staging/frontend &&
+                  git fetch && git pull &&
+                  . /home/www-user/.nvm/nvm.sh && nvm use 18 && npm i && npm run build &&
+                  pm2 startOrRestart ecosystem.config.js --only staging:frontend'
+    dev:
+      - step:
+          name: DEV PIPELINE
+          script:
+            - pipe: atlassian/ssh-run:0.4.1
+              variables:
+                SSH_USER: $MDC_USER
+                SERVER: $MDC_HOSTNAME
+                SSH_KEY: $MDC_PK_BASE64
+                PORT: '22'
+                DEBUG: 'true'
+                COMMAND: 'cd /var/www/dev/frontend &&
+                  git fetch && git pull &&
+                  . /home/www-user/.nvm/nvm.sh && nvm use 18 && npm i && npm run build &&
+                  pm2 startOrRestart ecosystem.config.js --only dev:frontend'

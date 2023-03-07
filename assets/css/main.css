@@ -1,0 +1,87 @@
+html {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  @extend .typo--m;
+  color: var(--color-black);
+  background: var(--color-white);
+}
+
+body:not(.loaded) {
+  visibility: hidden;
+}
+
+pre {
+  margin-top: 0;
+}
+
+.vertical-slide {
+  &-enter-active,
+  &-leave-active {
+    transition: transform 0.3s;
+  }
+
+  &-enter-from {
+    transform: translateY(calc(100 * var(--vh)));
+  }
+  &-leave-to {
+    transform: translateY(calc(-100 * var(--vh)));
+  }
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.width-transition {
+  transition: width 0.3s;
+  overflow: hidden;
+
+  > * {
+    width: max-content;
+    opacity: 0;
+    transition: opacity 0.1s;
+  }
+
+  &.active {
+    > * {
+      opacity: 1;
+      transition: opacity 0.3s 0.1s;
+    }
+  }
+}
+
+.fade {
+  &-enter-active,
+  &-leave-active {
+    transition: opacity 0.3s;
+  }
+
+  &-enter-from,
+  &-leave-to {
+    opacity: 0;
+  }
+}
+
+.fade-group {
+  &-enter-active,
+  &-leave-active {
+    transition: opacity 0.3s;
+  }
+
+  &-leave-active {
+    position: absolute;
+  }
+
+  &-enter-from,
+  &-leave-to {
+    opacity: 0;
+  }
+}

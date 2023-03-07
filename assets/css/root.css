@@ -1,0 +1,23 @@
+:root {
+  @each $variable in $variables {
+    @each $key, $value in $($variable) {
+      --$(variable)-$(key): $(value);
+    }
+  }
+
+  @each $variable in $variables-str {
+    @each $value in $($variable) {
+      --$(variable): $(value);
+    }
+  }
+
+  @each $variable in $variables-mq {
+    @each $point, $media in $breakpoint-$(variable) {
+      @media (min-width: $(media)) {
+        @each $key, $value in $($(variable)-$(point)) {
+          --$(variable)-$(key): $(value);
+        }
+      }
+    }
+  }
+}

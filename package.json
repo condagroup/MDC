@@ -1,0 +1,40 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "normalize.css": "^8.0.1",
+    "nuxt": "3.2.0",
+    "postcss": "^8.4.21",
+    "postcss-custom-media": "^8.0.2",
+    "postcss-each": "^1.1.0",
+    "postcss-extend-rule": "^4.0.0",
+    "postcss-nested": "^6.0.0",
+    "postcss-preset-env": "^8.0.0",
+    "postcss-simple-vars": "^7.0.1",
+    "vite-svg-loader": "^4.0.0",
+    "vue-select": "^4.0.0-beta.6"
+  },
+  "dependencies": {
+    "@gigads/style": "^0.5.21",
+    "@nuxtjs/apollo": "^5.0.0-alpha.5",
+    "@nuxtjs/i18n": "^8.0.0-beta.7",
+    "@pinia/nuxt": "^0.4.6",
+    "@popperjs/core": "^2.11.6",
+    "@vueuse/nuxt": "^9.10.0",
+    "hls.js": "^1.3.1",
+    "nuxt-swiper": "^1.0.0",
+    "pinia": "^2.0.32",
+    "pixi.js": "^7.2.0-beta",
+    "swiper": "^9.0.5",
+    "vuetify": "^3.1.6"
+  },
+  "overrides": {
+    "vue": "3"
+  }
+}
